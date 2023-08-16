@@ -74,7 +74,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #999, #000);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
@@ -156,7 +156,7 @@ body {
     background-color: #fff; }
 
 .btn--green {
-  background-color: #55c57a;
+  background-color: #000;
   color: #fff; }
   .btn--green::after {
     background-color: #fff; }
@@ -179,15 +179,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #55c57a;
+  color: #000;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #000;
   padding: 3px;
   transition: all 0.2s; }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #000;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -310,7 +310,7 @@ body {
       left: 20%;
       top: 10rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #55c57a;
+      outline: 0.5rem solid #000;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -328,7 +328,7 @@ body {
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-image: linear-gradient(to right, #777, #000);
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
@@ -352,7 +352,7 @@ body {
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #55c57a; }
+    border-bottom: 3px solid #000; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
@@ -386,7 +386,7 @@ body {
 .form__radio-button {
   height: 3rem;
   width: 3rem;
-  border: 5px solid #55c57a;
+  border: 5px solid #000;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -402,7 +402,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #55c57a;
+    background-color: #000;
     opacity: 0;
     transition: opacity 0.2s; }
 
@@ -523,7 +523,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6)), url(../img/phone-fly.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -531,10 +531,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    top: 3rem;
+    left: 3rem; }
   .header__logo {
-    height: 3.5rem; }
+    height: 6rem; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -565,7 +565,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(#fff, #000);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -599,8 +599,8 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-  background-size: 230%;
+  background-image: linear-gradient(120deg, transparent 10%, transparent 60%, #fff 60%);
+  background-size: 300%;
   transition: all 0.4s; }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1.5rem;
@@ -608,7 +608,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #55c57a;
+  color: #000;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -660,7 +660,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url(../img/phone-fly-3.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
@@ -678,10 +678,10 @@ body {
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  background-image: linear-gradient(to right bottom, #fff, #000); }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/phone-fly-4.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
