@@ -1,12 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
 
-<body>
-</body>
+    <link rel="stylesheet" href="/asset/css/icon-font.css" />
+    <link rel="stylesheet" href="/asset/css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/asset/img/iporn-green-gradient.png"
+    />
 
+    <title>IPorn | Exciting Friend</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>01</span>Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>02</span>Product</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>03</span>News</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>04</span>Contact</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>05</span>Admin</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="/asset/img/iporn-black.png" alt="Logo" class="header__logo" />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">IPorn</span>
+          <span class="heading-primary--sub">is which life is high</span>
+        </h1>
+        <a href="#" class="btn btn--white btn--animated">Discover our phone</a>
+      </div>
+    </header>
+    <main>
+      <section class="section-about">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Exciting porn for adventurous people
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              You're going to fall in love with phone
+            </h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              tempore quibusdam aliquid ab consectetur, ad earum consequuntur
+              delectus qui adipisci commodi.
+            </p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Live-show adventure like you never have before
+            </h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, dolores! Quis quaerat sint magnam doloribus, eos fuga
+              nisi laborum ex at corporis assumenda explicabo ratione nemo nobis
+              quae molestiae suscipit.
+            </p>
+            <a href="#" class="btn-text">Learn more &rarr;</a>
+          </div>
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img src="/asset/img/phone-fly-2.jpg" alt="Photo 1"
+              class="composition__photo composition_photo--p1"
+            </div>
+            <!-- <div class="composition">
+              <img src="/asset/img/nat-2-large.jpg" alt="Photo 2"
+              class="composition__photo composition_photo--p2"
+            </div>
+            <div class="composition">
+              <img src="/asset/img/nat-3-large.jpg" alt="Photo 3"
+              class="composition__photo composition_photo--p3"
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- FEATURE -->
+      <section class="section-features">
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the Phone
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the phone
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the phone
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the phone
+              </h3>
+              <p class="feature-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-tours">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">Most popular Guarantee</h2>
+        </div>
+        <!--MOST POPULAR TOUR-->
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1"
+                    >Basic Guarantee</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>1 device</li>
+                    <li>Up to 3 months</li>
+                    <li>2 free pickup & deliver</li>
+                    <li>2 x 20% dis - buying phone</li>
+                    <li>2 x 20% dis - accessories</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--1">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$279</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Book now !</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--2"
+                    >Premium Guarantee</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>2 devices</li>
+                    <li>Up to 6 months</li>
+                    <li>6 free pickup & deliver</li>
+                    <li>3 x 30% dis - buying phone</li>
+                    <li>3 x 30% dis - accessories</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--2">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$679</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Book now !</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--3"
+                    >Delux Guarantee</span
+                  >
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>6 device</li>
+                    <li>Up to 12 months</li>
+                    <li>12 free pickup & deliver</li>
+                    <li>6 x 40% dis - buying phone</li>
+                    <li>6 x 40% dis - accessories</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back--3">
+                <div class="card__cta">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">$1279</p>
+                  </div>
+                  <a href="#" class="btn btn--white">Book now !</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-center-text u-margin-top-hug">
+          <a href="#" class="btn btn--green">Discover all tours</a>
+        </div>
+      </section>
+      <section class="section-stories">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="/asset/img/phone-video.mp4" type="video/mp4" />
+            Your browser is not supported !
+          </video>
+        </div>
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">We make people genuinely happy</h2>
+        </div>
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img
+                src="/asset/img/nat-8.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">Thai Tai</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                I had the best week ever with my family
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores! Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Distinctio, dolores! Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img
+                src="/asset/img/nat-9.jpg"
+                alt="Person on a tour"
+                class="story__img"
+              />
+              <figcaption class="story__caption">Le Duy</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                I had the best week ever with my family
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, dolores! Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Distinctio, dolores! Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Distinctio, dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="u-center-text u-margin-top-hug">
+          <a href="#" class="btn-text">Read all stories &rarr;</a>
+        </div>
+      </section>
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Dividial</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label"
+                      ><span class="form__radio-button"></span> Reseller</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          src="/asset/img/iporn-green-gradient.png"
+          alt="Full logo"
+          class="footer__logo"
+        />
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Carrers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Term</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built my <a href="#" class="footer__link">Duy Toby</a> for my
+            professioal developer.
+            <a href="#" class="footer__link">Pro in coding SCSS</a>. Copyright
+            &copy; by Duy Toby.Please contact for further information to re-use.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--
+    <section class="grid-test">
+      <div class="row">
+        <div class="col-1-of-2">Col 1 of 2</div>
+        <div class="col-1-of-2">Col 1 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-3">Col 1 of 3</div>
+        <div class="col-1-of-3">Col 1 of 3</div>
+        <div class="col-1-of-3">Col 1 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-3">Col 1 of 3</div>
+        <div class="col-2-of-3">Col 2 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-1-of-4">Col 1 of 4</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-2-of-4">Col 2 of 4</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">Col 1 of 4</div>
+        <div class="col-3-of-4">Col 3 of 4</div>
+      </div>
+    </section>
+  --></body>
 </html>
