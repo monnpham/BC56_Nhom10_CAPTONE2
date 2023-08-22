@@ -1,0 +1,170 @@
+section {
+    font-size: 16px;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: auto;
+}
+
+.modal-content {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+/* .btn-primary {
+    color: white;
+    background-color: #337ab7;
+    border-color: #337ab7;
+} */
+section>.btn-primary:focus {
+    color: #fff;
+    background-color: #363636;
+    border-color: #3a3a3b;
+    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, .5);
+}
+
+/* .btn-primary:hover {
+    color: white;
+    background-color: #2e6da4;
+    border-color: #2e6da4;
+} */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: lightgray;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.table img {
+    width: 100px;
+    height: 100px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.bigsize {
+    font-size: 100px;
+    color: rgb(112, 112, 112);
+
+}
+
+.btn_delete {
+    background-color: rgb(230, 62, 62);
+    color: white;
+    margin-bottom: 2px;
+}
+
+.btn_edit {
+    background-color: rgb(37, 157, 209);
+    color: white;
+    margin-top: 2px;
+}
+
+.td_btn {
+    display: block;
+    border: none;
+    height: 50px;
+    width: 75px;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 150px;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #696969;
+    border-color: #4e5157;
+    box-shadow: 0 0 0 0.25rem rgba(70, 71, 74, 0.5);
+}
+
+button.btn,
+select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+button.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #696969;
+    color: white;
+}
+
+button.btn:hover {
+    background-color: #000000;
+}
+
+select {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+select option {
+    color: black;
+}
+
+thead>:first-child {
+    background-color: #333;
+    color: white;
+}
+
+.modal-footer>button {
+    font-size: 18px;
+    width: calc(100/3);
+}
