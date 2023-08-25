@@ -1,6 +1,6 @@
-import productsServ from "../../services/services_admin.js";
-import { getInfor, onSuccess, showDataForm, renderProductsList } from "../../controller/controller-admin/controller-admin.js";
-// render food list
+import productsServ from "../../services/services_admin.js"
+import { getInfor, onFail, onSuccess, showDataForm, renderProductsList, valid_data, new_data } from "../../controller/controller-admin/controller-admin.js";
+
 let fetchProductList = () => {
     productsServ.getList()
         .then((res) => {
@@ -13,20 +13,23 @@ let fetchProductList = () => {
 };
 fetchProductList();
 
+window.addpro = () => {
+    new_data()
+    valid_data(data)
+}
 window.addProduct = () => {
-    console.log("yes");
-    let data = getInfor();
-    productsServ
-        .addProduct(data)
-        .then((res) => {
-            onSuccess("Add Success");
-            $('#exampleModal').modal('hide');
-            fetchProductList();
-
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    let data = getInfor()
+    if (!valid_data(data)) {
+        productsServ.addProduct(data)
+            .then((res) => {
+                onSuccess("Add Success");
+                $('#exampleModal').modal('hide');
+                fetchProductList();
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    } else onFail("Add Fail!");
 };
 let deleteProduct = (id) => {
     productsServ.deleteProduct(id)
@@ -46,7 +49,7 @@ window.editProduct = (id) => {
     productsServ
         .getDetail(id)
         .then((res) => {
-            console.log(res);
+
             showDataForm(res.data);
         })
         .catch((err) => {
@@ -56,13 +59,17 @@ window.editProduct = (id) => {
 
 window.updateProduct = () => {
     let data = getInfor();
-    productsServ.updateProduct(data.id, data)
-        .then((res) => {
-            fetchProductList();
-            onSuccess("Update Success");
-            $('#exampleModal').modal('hide');
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+    if (!valid_data(data)) {
+        productsServ.updateProduct(data.id, data)
+            .then((res) => {
+                fetchProductList();
+                onSuccess("Update Success");
+                $('#exampleModal').modal('hide');
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    } else onFail("Update Fail!");
+
 }
+

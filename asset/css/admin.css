@@ -52,9 +52,9 @@ section {
 } */
 section>.btn-primary:focus {
     color: #fff;
-    background-color: #363636;
-    border-color: #3a3a3b;
-    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, .5);
+    background-color: #444343;
+    border-color: #403f3f;
+
 }
 
 /* .btn-primary:hover {
@@ -122,8 +122,8 @@ footer {
 
 .btn-primary:focus {
     color: #fff;
-    background-color: #696969;
-    border-color: #4e5157;
+    background-color: #3b3a3a;
+    border-color: #393838;
     box-shadow: 0 0 0 0.25rem rgba(70, 71, 74, 0.5);
 }
 
@@ -139,7 +139,7 @@ button.btn {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #696969;
+    background-color: #000000;
     color: white;
 }
 
@@ -167,4 +167,22 @@ thead>:first-child {
 .modal-footer>button {
     font-size: 18px;
     width: calc(100/3);
+}
+
+.noti,
+.req {
+    color: red;
+}
+
+/* .noti_req .active {
+    display: block;
+} */
+
+span.noti {
+    display: none;
+}
+
+label {
+    display: flex;
+    max-width: 100%;
 }

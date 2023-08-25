@@ -8,6 +8,7 @@ var row = table.rows[0];
 row.appendChild(button);
 function openModal(modalId) {
     // Get the modal
+    data_New_add()
     var modal = document.getElementById(modalId);
 
     // Show the modal
