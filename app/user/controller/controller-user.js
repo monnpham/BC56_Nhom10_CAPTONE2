@@ -39,7 +39,7 @@ export let renderUserProductsList = (list) => {
           <div class="description"></div>
           <h3>DES: <span>${description}</span></h3>
           <button
-            onclick="add2cart(${id})"
+            onclick="add2Cart(${id})"
             type="button"
             class="btn btn-primary"
             style="margin: 50px 0 0 30px"
@@ -52,3 +52,7 @@ export let renderUserProductsList = (list) => {
     );
   document.getElementById("item_lst").innerHTML = contentHTML;
 };
+
+// export let add2Cart = (id) => {
+//   console.log(data.id);
+// };
