@@ -411,7 +411,7 @@ a {
       cursor: pointer; }
       @media (max-width: 56.25em) {
         #main-nav a.cart-button span.bag-icon {
-          top: 4rem;
+          top: 12rem;
           right: 4rem; } }
       @media (max-width: 37.5em) {
         #main-nav a.cart-button span.bag-icon {
@@ -433,10 +433,14 @@ a {
       align-items: center;
       justify-content: center;
       transition: all 0.5s linear 0s; }
+      @media (max-width: 75em) {
+        #main-nav a.cart-button span.bag-count {
+          top: 2.2rem;
+          right: -0.6rem; } }
       @media (max-width: 56.25em) {
         #main-nav a.cart-button span.bag-count {
-          top: 4rem;
-          right: 4rem; } }
+          top: 0;
+          right: -2.2rem; } }
       @media (max-width: 37.5em) {
         #main-nav a.cart-button span.bag-count {
           top: 2rem;

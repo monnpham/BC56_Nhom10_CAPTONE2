@@ -136,7 +136,7 @@ a {
       text-align: center;
       cursor: pointer;
       @include respond(tab-port) {
-        top: 4rem;
+        top: 12rem;
         right: 4rem;
       }
       @include respond(phone) {
@@ -161,9 +161,13 @@ a {
       align-items: center;
       justify-content: center;
       transition: all 0.5s linear 0s;
+      @include respond(tab-land) {
+        top: 2.2rem;
+        right: -0.6rem;
+      }
       @include respond(tab-port) {
-        top: 4rem;
-        right: 4rem;
+        top: 0;
+        right: -2.2rem;
       }
       @include respond(phone) {
         top: 2rem;
