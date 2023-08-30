@@ -88,7 +88,7 @@ a {
 
   // width: 100%;
   // height: 100vh;
-  background-color: $color-white;
+  // background-color: $color-white;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -96,7 +96,7 @@ a {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+  // box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
   text-align: center;
   cursor: pointer;
 
@@ -135,6 +135,14 @@ a {
       box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
       text-align: center;
       cursor: pointer;
+      @include respond(tab-port) {
+        top: 4rem;
+        right: 4rem;
+      }
+      @include respond(phone) {
+        top: 14rem;
+        right: 3rem;
+      }
     }
 
     span.bag-count {
@@ -153,6 +161,14 @@ a {
       align-items: center;
       justify-content: center;
       transition: all 0.5s linear 0s;
+      @include respond(tab-port) {
+        top: 4rem;
+        right: 4rem;
+      }
+      @include respond(phone) {
+        top: 2rem;
+        right: -3.2rem;
+      }
     }
 
     span.bag-label {
