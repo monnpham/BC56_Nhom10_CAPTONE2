@@ -56,62 +56,86 @@ export let renderUserProductsList = (list) => {
 };
 
 export let renderCartProList = (data) => {
-  let cartHTML = "", count = 0, pric = 0
-  data.reverse().forEach(({ id, name, price, img }) => {
-    count++
-    pric += Number(price)
-    let cartString =
-      `<li class="product">
-        <a href="#" class="product-link">
-          <span class="product-image">
-            <img
-              src="${img}"
-              alt="Product Photo"
-            />
-          </span>
-          <span class="product-details">
-            <h3>${name}</h3>
-            <span class="qty-price">
-              <span class="qty">
-                <button class="minus-button" id="minus-button-1">-</button>
-                <input
-                  type="number"
-                  id="qty-input-1"
-                  class="qty-input"
-                  step="1"
-                  min="1"
-                  max="1000"
-                  name="qty-input"
-                  value="1"
-                  pattern="[0-9]*"
-                  title="Quantity"
-                  inputmode="numeric"
-                />
-                <button class="plus-button" id="plus-button-1">+</button>
-                <input
-                  type="hidden"
-                  name="item-price"
-                  id="item-price-1"
-                  value="12.00"
-                />
-              </span>
-              <span class="price">${price}</span>
+  let i = 0
+  rendercart()
+  window.minus = (id) => {
+    for (i = 0; i < data.length; i++) {
+      if (id == data[i].id) {
+        if (data[i].quality > 0) {
+          data[i].quality = data[i].quality - 1
+          rendercart()
+        }
+      }
+    }
+  }
+  window.plus = (id) => {
+    for (i = 0; i < data.length; i++) {
+      if (id == data[i].id) {
+        data[i].quality = data[i].quality + 1
+        rendercart()
+      }
+    }
+  }
+  function rendercart() {
+    let cartHTML = "", count = 0, pric = 0
+    data.reverse().forEach(({ id, name, price, img, quality }) => {
+      count++
+      price *= quality
+      pric += Number(price)
+      let cartString =
+        `<li class="product">
+          <a href="#" class="product-link">
+            <span class="product-image">
+              <img
+                src="${img}"
+                alt="Product Photo"
+              />
             </span>
-          </span>
-        </a>
-        <a onclick='deleteFood(${id})' class="remove-button remove-icon"
-          ><i class="bi bi-trash"></i
-        ></a>
-      </li>`;
-    cartHTML += cartString;
-  });
-  let amount = `$${pric}.00`
-  let Bcount = `${count}`
-  let proCount = `${count}`
-  document.getElementById("proCart").innerHTML = cartHTML;
-  document.getElementById("pro-count").innerHTML = proCount
-  document.getElementById("bag-Count").innerHTML = Bcount
-  document.getElementById("amount-pri").innerHTML = amount
+            <span class="product-details">
+              <h3>${name}</h3>
+              <span class="qty-price">
+                <span class="qty">
+                  <button onclick= minus(${id}) class="minus-button minus" id="minus-button-1">-</button>
+                  <input
+                    type="number"
+                    id="qty-input-1"
+                    class="qty-input"
+                    step="1"
+                    min="1"
+                    max="1000"
+                    name="qty-input"
+                    value="${quality}"
+                    pattern="[0-9]*"
+                    title="Quantity"
+                    inputmode="numeric"
+                  />
+                  <button onclick= plus(${id}) class="plus-button " id="plus-button-1">+</button>
+                  <input
+                    type="hidden"
+                    name="item-price"
+                    id="item-price-1"
+                    value="12.00"
+                  />
+                </span>
+                <span class="price">${price}</span>
+              </span>
+            </span>
+          </a>
+          <a onclick='deleteFood(${id})' class="remove-button remove-icon"
+            ><i class="bi bi-trash"></i
+          ></a>
+        </li>`;
+      cartHTML += cartString;
+    });
+    let amount = `$${pric}.00`
+    let Bcount = `${count}`
+    let proCount = `${count}`
+    document.getElementById("proCart").innerHTML = cartHTML;
+    document.getElementById("pro-count").innerHTML = proCount
+    document.getElementById("bag-Count").innerHTML = Bcount
+    document.getElementById("amount-pri").innerHTML = amount
+  }
+
 };
 
 export let getInfo2Cart = (data) => {
@@ -119,12 +143,14 @@ export let getInfo2Cart = (data) => {
   let name = data.name;
   let price = data.price;
   let img = data.img;
+  let quality = 1
 
   return {
     id,
     name,
     price,
     img,
+    quality
   };
 };
 

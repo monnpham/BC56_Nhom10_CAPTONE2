@@ -30,24 +30,39 @@ userFetchProductList();
 
 var cartProUser = [];
 window.add2Cart = (id) => {
-  productsUserServ
-    .getDetail(id)
-    .then((res) => {
-      let dataCart = getInfo2Cart(res.data);
-      cartProUser.push(dataCart);
-      // let { id, name, price, img } = dataCart;
-      // let cartProItem = new cartItem(id, name, price, img);
-      // renderCartProList(dataCart);
-      // showInfo2Cart(dataCart);
-      // for (var i = 0; i > cartProUser.length; i++) {
-      //   renderCartProList(cartProUser[i])
-      // }
-      renderCartProList(cartProUser)
+  let check = true
+  console.log("🚀 ~ file: main-user.js:35 ~ cartProUser.length:", cartProUser.length)
+  if (cartProUser.length > 0) {
+    for (var i = 0; i < cartProUser.length; i++) {
+      if (cartProUser[i].id == id) {
+        cartProUser[i].quality = cartProUser[i].quality + 1
+        renderCartProList(cartProUser)
+        check = false
+      }
+    }
+  }
+  console.log("🚀 ~ file: main-user.js:44 ~ check:", check)
+  if (check) {
+    productsUserServ
+      .getDetail(id)
+      .then((res) => {
+        let dataCart = getInfo2Cart(res.data);
+        cartProUser.push(dataCart);
+        // let { id, name, price, img } = dataCart;
+        // let cartProItem = new cartItem(id, name, price, img);
+        // renderCartProList(dataCart);
+        // showInfo2Cart(dataCart);
+        // for (var i = 0; i > cartProUser.length; i++) {
+        //   renderCartProList(cartProUser[i])
+        // }
+        renderCartProList(cartProUser)
 
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
 };
 // window.onload = function () {
 //   if (getStorageJSON("cartJSValue")) {

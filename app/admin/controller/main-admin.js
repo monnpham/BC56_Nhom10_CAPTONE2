@@ -58,6 +58,7 @@ let deleteProduct = (id) => {
 window.deleteProduct = deleteProduct;
 
 window.editProduct = (id) => {
+  console.log("🚀 ~ file: main-admin.js:61 ~ id:", id)
   $("#exampleModal").modal("show");
   productsServ
     .getDetail(id)
