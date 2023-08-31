@@ -1,7 +1,6 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass asset/sass/main.scss asset/css/style.css -w"
@@ -13,6 +12,16 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.10.5",
     "jquery": "^3.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monnpham/TAI-DUY-CAPSTONE-PHONE_STORE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monnpham/TAI-DUY-CAPSTONE-PHONE_STORE/issues"
+  },
+  "homepage": "https://github.com/monnpham/TAI-DUY-CAPSTONE-PHONE_STORE#readme",
+  "description": ""
 }
