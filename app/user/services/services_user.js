@@ -7,8 +7,16 @@ let getProList = () => {
   });
 };
 
+let getDetail = (id) => {
+  return axios({
+    url: `${BASE_URL}/${id}`,
+    method: "GET",
+  });
+};
+
 let productsUserServ = {
   getProList,
+  getDetail,
 };
 
 export default productsUserServ;
