@@ -119,14 +119,7 @@ export let getInfo2Cart = (data) => {
   };
 };
 
-// export let showInfo2Cart = (data) => {
-//   let { id, name, price, img } = data;
-//   console.log(data);
-//   document.getElementById("idPro").value = id;
-//   document.getElementById("namePro").value = name;
-//   document.getElementById("pricePro").value = price;
-//   document.getElementById("imgPro").value = img;
-// };
+
 export let onSuccess = (message) => {
   Swal.fire(message, "", "success");
 };

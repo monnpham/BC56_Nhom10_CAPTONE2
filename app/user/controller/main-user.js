@@ -21,12 +21,6 @@ let userFetchProductList = () => {
 };
 userFetchProductList();
 
-// window.add2Cart = () => {
-//   let data = getInfo2Cart();
-//   let { id, name, price, img } = data;
-//   let cartUserItem = new cartItem(id, name, price, img);
-//   showInfo2Cart(cartUserItem);
-// };
 
 var cartProUser = [];
 window.add2Cart = (id) => {
@@ -36,21 +30,11 @@ window.add2Cart = (id) => {
     .then((res) => {
       let dataCart = getInfo2Cart(res.data);
       console.log(dataCart);
-      window.cartProUser.push(dataCart);
-      // let { id, name, price, img } = dataCart;
-      // let cartProItem = new cartItem(id, name, price, img);
-      // renderCartProList(dataCart);
-      // showInfo2Cart(dataCart);
+      var arrCartUser = Object.values(dataCart);
+      console.log(arrCartUser);
+      
     })
     .catch((err) => {
       console.log(err);
     });
 };
-// window.onload = function () {
-//   if (getStorageJSON("cartJSValue")) {
-//     //Lấy ra
-//     cartJSValue = getStorageJSON("cartJSValue");
-//     //Tạo table
-//     // renderTableSinhVien(arrSinhVien);
-//   }
-// };
