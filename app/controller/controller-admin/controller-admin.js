@@ -78,14 +78,12 @@ export let renderProductsList = (list) => {
     document.getElementById("tbodyProd").innerHTML = contentHTML
 }
 
-
 export let onSuccess = (message) => {
     Swal.fire(message, "", "success")
 }
 export let onFail = (message) => {
     Swal.fire(message, "", "error")
 }
-
 
 // valid
 export let valid_data = (data) => {
@@ -146,7 +144,6 @@ export let valid_data = (data) => {
     } else {
         noti_img.style.display = "none"
     }
-    console.log("🚀 ~ file: controller-admin.js:97 ~ ret:", ret)
     if (ret == 1) {
         return true
     } else return false
