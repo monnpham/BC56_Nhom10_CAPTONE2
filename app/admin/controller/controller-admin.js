@@ -93,7 +93,8 @@ export let valid_data = (data) => {
         screen,
         backCamera,
         frontCamera,
-        img, } = data, ret = 0
+        img, } = data
+
     let noti_id = document.getElementById("noti_req_id")
     let noti_name = document.getElementById("noti_req_name")
     let noti_price = document.getElementById("noti_req_price")
@@ -101,52 +102,47 @@ export let valid_data = (data) => {
     let noti_backCamera = document.getElementById("noti_req_bcam")
     let noti_frontCamera = document.getElementById("noti_req_fcam")
     let noti_img = document.getElementById("noti_req_img")
-    //id
-    if (id === "") {
-        noti_id.style.display = "block"
-        ret = 1
-    } else {
-        noti_id.style.display = "none"
-    }
+
+    let ret = 0
+    // if (id === "") {
+    //     noti_id.style.display = "block"
+    //     ret = 1
+    // } else { noti_id.style.display = "none" }
+
     if (name === "") {
         noti_name.style.display = "block"
         ret = 1
-    } else {
-        noti_name.style.display = "none"
-    }
+    } else { noti_name.style.display = "none" }
+
     if (price === "" || price < 0) {
         noti_price.style.display = "block"
         ret = 1
-    } else {
-        noti_price.style.display = "none"
-    }
+    } else { noti_price.style.display = "none" }
+
     if (screen === "") {
         noti_screen.style.display = "block"
         ret = 1
-    } else {
-        noti_screen.style.display = "none"
-    }
+    } else { noti_screen.style.display = "none" }
+
     if (backCamera === "") {
         noti_backCamera.style.display = "block"
         ret = 1
-    } else {
-        noti_backCamera.style.display = "none"
-    }
+    } else { noti_backCamera.style.display = "none" }
+
     if (frontCamera === "") {
         noti_frontCamera.style.display = "block"
         ret = 1
-    } else {
-        noti_frontCamera.style.display = "none"
-    }
+    } else { noti_frontCamera.style.display = "none" }
+
     if (img === "") {
         noti_img.style.display = "block"
-        ret = 1
-    } else {
-        noti_img.style.display = "none"
-    }
+        return true
+    } else { noti_img.style.display = "none" }
+
     if (ret == 1) {
         return true
-    } else return false
+    }
+    return false
 }
 
 // new data add

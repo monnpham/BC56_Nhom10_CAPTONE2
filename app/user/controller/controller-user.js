@@ -55,10 +55,13 @@ export let renderUserProductsList = (list) => {
   document.getElementById("item_lst").innerHTML = contentHTML;
 };
 
-export let renderCartProList = () => {
-  let cartHTML = "";
+export let renderCartProList = (data) => {
+  let cartHTML = "", count = 0, pric = 0
   data.reverse().forEach(({ id, name, price, img }) => {
-    let cartString = `<li class="product">
+    count++
+    pric += Number(price)
+    let cartString =
+      `<li class="product">
         <a href="#" class="product-link">
           <span class="product-image">
             <img
@@ -102,7 +105,13 @@ export let renderCartProList = () => {
       </li>`;
     cartHTML += cartString;
   });
+  let amount = `$${pric}.00`
+  let Bcount = `${count}`
+  let proCount = `${count}`
   document.getElementById("proCart").innerHTML = cartHTML;
+  document.getElementById("pro-count").innerHTML = proCount
+  document.getElementById("bag-Count").innerHTML = Bcount
+  document.getElementById("amount-pri").innerHTML = amount
 };
 
 export let getInfo2Cart = (data) => {

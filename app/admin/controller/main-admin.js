@@ -24,10 +24,11 @@ fetchProductList();
 
 window.addpro = () => {
   new_data();
-  valid_data(data);
+  // valid_data(data);
 };
 window.addProduct = () => {
   let data = getInfor();
+  console.log(valid_data(data))
   if (!valid_data(data)) {
     productsServ
       .addProduct(data)
@@ -41,6 +42,7 @@ window.addProduct = () => {
       });
   } else onFail("Add Fail!");
 };
+
 let deleteProduct = (id) => {
   productsServ
     .deleteProduct(id)

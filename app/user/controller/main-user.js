@@ -30,17 +30,20 @@ userFetchProductList();
 
 var cartProUser = [];
 window.add2Cart = (id) => {
-  console.log(id);
   productsUserServ
     .getDetail(id)
     .then((res) => {
       let dataCart = getInfo2Cart(res.data);
-      console.log(dataCart);
-      window.cartProUser.push(dataCart);
+      cartProUser.push(dataCart);
       // let { id, name, price, img } = dataCart;
       // let cartProItem = new cartItem(id, name, price, img);
       // renderCartProList(dataCart);
       // showInfo2Cart(dataCart);
+      // for (var i = 0; i > cartProUser.length; i++) {
+      //   renderCartProList(cartProUser[i])
+      // }
+      renderCartProList(cartProUser)
+
     })
     .catch((err) => {
       console.log(err);
