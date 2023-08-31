@@ -43,20 +43,58 @@ export let showDataForm = (data) => {
 };
 
 export let renderProductsList = (list) => {
-    let contentHTML = ""
-    list.reverse().forEach(({
-        id,
-        name,
-        type,
-        price,
-        screen,
-        backCamera,
-        frontCamera,
-        img,
-        description,
-    }) => {
-        let trString =
-            `<tr>
+    let i = 0
+    render(list)
+    console.table(list)
+    window.search = () => {
+        var type = document.querySelector('#searchName').value
+        console.log("🚀 ~ file: controller-admin.js:50 ~ renderProductsList ~ type:", list.length)
+        var pro = []
+        if (type === "all") {
+            render(list)
+        }
+        if (type === "smartphone") {
+            for (i = 0; i < list.length; i++) {
+                if (list[i].type === "smartphone") {
+                    pro.push(list[i]);
+                }
+            }
+            console.table(pro)
+            render(pro)
+        }
+        if (type === "laptop") {
+            for (i = 0; i < list.length; i++) {
+                if (list[i].type === "laptop") {
+                    pro.push(list[i]);
+                }
+            }
+            render(pro)
+        }
+        if (type === "tablet") {
+            for (i = 0; i < list.length; i++) {
+                if (list[i].type === "tablet") {
+                    pro.push(list[i]);
+                }
+            }
+            render(pro)
+        }
+    }
+
+    function render(proList) {
+        let contentHTML = ""
+        proList.reverse().forEach(({
+            id,
+            name,
+            type,
+            price,
+            screen,
+            backCamera,
+            frontCamera,
+            img,
+            description,
+        }) => {
+            let trString =
+                `<tr>
             <td>${id}</td>
             <td>${name}</td>      
             <td>${price}</td>
@@ -73,9 +111,10 @@ export let renderProductsList = (list) => {
                 onclick="editProduct(${id})">Edit</button>
             </td>
         </tr>`
-        contentHTML += trString;
-    })
-    document.getElementById("tbodyProd").innerHTML = contentHTML
+            contentHTML += trString;
+        })
+        document.getElementById("tbodyProd").innerHTML = contentHTML
+    }
 }
 
 export let onSuccess = (message) => {
