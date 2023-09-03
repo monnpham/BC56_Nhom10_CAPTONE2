@@ -45,10 +45,8 @@ export let showDataForm = (data) => {
 export let renderProductsList = (list) => {
     let i = 0
     render(list)
-    console.table(list)
     window.search = () => {
         var type = document.querySelector('#searchName').value
-        console.log("🚀 ~ file: controller-admin.js:50 ~ renderProductsList ~ type:", list.length)
         var pro = []
         if (type === "all") {
             render(list)
@@ -59,7 +57,6 @@ export let renderProductsList = (list) => {
                     pro.push(list[i]);
                 }
             }
-            console.table(pro)
             render(pro)
         }
         if (type === "laptop") {

@@ -12,7 +12,6 @@ let userFetchProductList = () => {
   productsUserServ
     .getProList()
     .then((res) => {
-      console.log(res);
       renderUserProductsList(res.data);
     })
     .catch((err) => {
@@ -31,7 +30,6 @@ userFetchProductList();
 var cartProUser = [];
 window.add2Cart = (id) => {
   let check = true
-  console.log("🚀 ~ file: main-user.js:35 ~ cartProUser.length:", cartProUser.length)
   if (cartProUser.length > 0) {
     for (var i = 0; i < cartProUser.length; i++) {
       if (cartProUser[i].id == id) {
@@ -41,7 +39,6 @@ window.add2Cart = (id) => {
       }
     }
   }
-  console.log("🚀 ~ file: main-user.js:44 ~ check:", check)
   if (check) {
     productsUserServ
       .getDetail(id)

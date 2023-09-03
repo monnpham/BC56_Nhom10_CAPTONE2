@@ -58,6 +58,20 @@ export let renderUserProductsList = (list) => {
 export let renderCartProList = (data) => {
   let i = 0
   rendercart()
+  window.checkout = () => {
+    if (data.length > 0) {
+      data.splice(0, data.length);
+      rendercart()
+    }
+  }
+  window.deleteProCart = (id) => {
+    for (i = 0; i < data.length; i++) {
+      if (id == data[i].id) {
+        data.splice(i, 1);
+        rendercart()
+      }
+    }
+  }
   window.minus = (id) => {
     for (i = 0; i < data.length; i++) {
       if (id == data[i].id) {
@@ -78,13 +92,14 @@ export let renderCartProList = (data) => {
   }
   function rendercart() {
     let cartHTML = "", count = 0, pric = 0
+    data.sort((a, b) => a.id - b.id);
     data.reverse().forEach(({ id, name, price, img, quality }) => {
       count++
       price *= quality
       pric += Number(price)
       let cartString =
         `<li class="product">
-          <a href="#" class="product-link">
+          <a class="product-link">
             <span class="product-image">
               <img
                 src="${img}"
@@ -121,9 +136,8 @@ export let renderCartProList = (data) => {
               </span>
             </span>
           </a>
-          <a onclick='deleteFood(${id})' class="remove-button remove-icon"
-            ><i class="bi bi-trash"></i
-          ></a>
+          <a onclick='deleteProCart(${id})' class="remove-button remove-icon"
+            ><i class="bi bi-trash"></i  ></a>
         </li>`;
       cartHTML += cartString;
     });
@@ -175,8 +189,7 @@ export let getCartLocal = (name) => {
   if (localStorage.getItem(name)) {
     var cartJSLoval = localStorage.getItem(name);
     var cartJSValue = JSON.parse(cartJSLoval);
-
-    console.log("cartJSValue", cartJSValue);
+    // console.log("cartJSValue", cartJSValue);
     return cartJSValue;
   }
   return null;

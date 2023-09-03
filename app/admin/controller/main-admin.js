@@ -13,7 +13,6 @@ let fetchProductList = () => {
   productsServ
     .getList()
     .then((res) => {
-      console.log(res);
       renderProductsList(res.data);
     })
     .catch((err) => {
@@ -28,7 +27,6 @@ window.addpro = () => {
 };
 window.addProduct = () => {
   let data = getInfor();
-  console.log(valid_data(data))
   if (!valid_data(data)) {
     productsServ
       .addProduct(data)
@@ -47,7 +45,6 @@ let deleteProduct = (id) => {
   productsServ
     .deleteProduct(id)
     .then((res) => {
-      console.log(res);
       onSuccess("Delete Success");
       fetchProductList();
     })
