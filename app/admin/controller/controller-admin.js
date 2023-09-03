@@ -46,36 +46,43 @@ export let renderProductsList = (list) => {
     let i = 0
     render(list)
     window.search = () => {
-        var type = document.querySelector('#searchName').value
-        var pro = []
-        if (type === "all") {
+        var name = document.querySelector('#searchName').value
+        if (name === "") {
             render(list)
         }
-        if (type === "smartphone") {
-            for (i = 0; i < list.length; i++) {
-                if (list[i].type === "smartphone") {
-                    pro.push(list[i]);
-                }
-            }
-            render(pro)
-        }
-        if (type === "laptop") {
-            for (i = 0; i < list.length; i++) {
-                if (list[i].type === "laptop") {
-                    pro.push(list[i]);
-                }
-            }
-            render(pro)
-        }
-        if (type === "tablet") {
-            for (i = 0; i < list.length; i++) {
-                if (list[i].type === "tablet") {
-                    pro.push(list[i]);
-                }
-            }
-            render(pro)
+        else {
+            let results = list.filter((list) => list.name.toLowerCase().startsWith(name.toLowerCase()));
+            render(results)
         }
     }
+    //     if (type === "all") {
+    //         render(list)
+    //     }
+    //     if (type === "smartphone") {
+    //         for (i = 0; i < list.length; i++) {
+    //             if (list[i].type === "smartphone") {
+    //                 pro.push(list[i]);
+    //             }
+    //         }
+    //         render(pro)
+    //     }
+    //     if (type === "laptop") {
+    //         for (i = 0; i < list.length; i++) {
+    //             if (list[i].type === "laptop") {
+    //                 pro.push(list[i]);
+    //             }
+    //         }
+    //         render(pro)
+    //     }
+    //     if (type === "tablet") {
+    //         for (i = 0; i < list.length; i++) {
+    //             if (list[i].type === "tablet") {
+    //                 pro.push(list[i]);
+    //             }
+    //         }
+    //         render(pro)
+    //     }
+    // }
 
     function render(proList) {
         let contentHTML = ""
